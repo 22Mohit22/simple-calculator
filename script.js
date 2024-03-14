@@ -73,3 +73,37 @@ zeroEl.addEventListener('click', () => {
         y += zeroEl.textContent;
     }
 })
+
+allOperators.forEach(operator => {
+    operator.addEventListener('click', () => {
+        handleOperatorClick(operator.textContent);
+    })
+})
+
+function handleOperatorClick(e) {
+
+    // this func checks if y is not empty then it will
+    // replace the older value of the operand with clicked value
+    // else if x is empty it will don't give any value to operand
+    // and if both the condition doesn't fit which means the x and 
+    // y both have some values it will calculate according to the 
+    // earlier assigned operator and will display result and 
+    // clear display and set the operator the clicked operator and
+    // then only y would be typeable 
+    
+    if(x != '') {
+        if(y == '') {
+            operand = e;
+            displayOperand.value = e;
+        } else if(x == '') {
+            operand = '';
+        } else {
+            displayNum1.value = calculate();
+            x = displayNum1.value;
+            operand = e;
+            displayOperand.value = e;
+            y = '';
+            displayNum2.value = '';
+        }
+    }
+}

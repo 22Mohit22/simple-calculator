@@ -119,3 +119,11 @@ equalsEl.addEventListener('click', () => {
     }
 });
 
+const finalDisplay = document.querySelector('#big-display');
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        finalDisplay.value = displayNum1.value + displayOperand.value + displayNum2.value;
+    })
+})

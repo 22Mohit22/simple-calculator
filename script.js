@@ -127,3 +127,14 @@ buttons.forEach(button => {
         finalDisplay.value = displayNum1.value + displayOperand.value + displayNum2.value;
     })
 })
+
+clearEl.addEventListener('click', clear);
+
+function clear() {
+    displayNum1.value = '';
+    displayOperand.value = '';
+    displayNum2.value = '';
+    x = '';
+    operand = '';
+    y = '';
+}

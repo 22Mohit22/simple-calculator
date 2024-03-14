@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div>
+                <input type="text" name="big-display" class="big-display" id="big-display" disabled placeholder="00"/>
+            </div>
+            <div class="display-container">
+                <input type="text" name="display" class="display" id="display-num1" disabled placeholder="00"/>
+                <input type="text" name="display" class="display" id="display-operand" disabled placeholder="00"/>
+                <input type="text" name="display" class="display" id="display-num2" disabled placeholder="00"/>
+                
+            </div>
+            <div class="numpad">
+                <div id="left-btns">
+                    <div id="top-box">
+                        <button type="button" class="misc" id="clear">AC</button>
+                        <button type="button" class="operand" id="multiply">x</button>
+                        <button type="button" class="operand" id="divide">/</button>
+                    </div>
+                    <div id="numbers-only">
+                        <button type="button" class="num" id="nine">9</button>
+                        <button type="button" class="num" id="eight">8</button>
+                        <button type="button" class="num" id="seven">7</button>
+                        <button type="button" class="num" id="six">6</button>
+                        <button type="button" class="num" id="five">5</button>
+                        <button type="button" class="num" id="four">4</button>
+                        <button type="button" class="num" id="three">3</button>
+                        <button type="button" class="num" id="two">2</button>
+                        <button type="button" class="num" id="one">1</button>            
+                    </div>
+                    <div id="bottom-box">
+                        <button type="button" class="num-zero" id="zero" >0</button>
+                        <button type="button" class="decimal" id="decimal">.</button>
+                    </div>
+                </div>
+                <div id="right-btns">
+                    <button type="button" class="operand" id="minus">-</button>
+                    <button type="button" class="operand" id="plus">+</button>
+                    <button type="button" class="equals" id="equals-to">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <script src="script.js"></script>
+    </body>
+    </html>
+    

@@ -61,3 +61,15 @@ function handleNumClick(e) {
         y += e;
     }
 }
+
+const zeroEl = document.getElementById('zero');
+
+zeroEl.addEventListener('click', () => {    
+    if(x != '' && operand == ''){
+        displayNum1.value += zeroEl.textContent;
+        x += zeroEl.textContent;
+    } else if(x != '' && operand != '' && y != '') {
+        displayNum2.value += zeroEl.textContent;
+        y += zeroEl.textContent;
+    }
+})

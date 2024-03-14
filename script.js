@@ -138,3 +138,53 @@ function clear() {
     operand = '';
     y = '';
 }
+
+decimalEl.addEventListener('click', () => {
+    handleDecimalClick(decimalEl.textContent);
+})
+
+function handleDecimalClick(e) {
+    
+    let countX = 0;  
+    let countY = 0;
+    let x_Arr = x.split('');
+
+    // the below foreach func is going through every digit 
+    // of variable x 
+    // and counting the number of decimal and if the count 
+    // is goes above 1 it stops counting.
+    x_Arr.forEach(digit => {
+        if(digit == e && countX < 1) {
+            countX++;
+        }
+    })
+
+    // same as aboue func but for variable y
+    let y_Arr = y.split('');
+    y_Arr.forEach(digit => {
+        if(digit == e && countY < 1) {
+            countY++;
+        }
+    })
+
+    // now the below code chunk is checking for
+    // the countx and county value if they are more than 1
+    // it won't append the decimal to x, y or display 
+
+    // basically this fuction check if the the count of decimal
+    // in variable x or y is 1 which means that if the variable
+    // already has a decimal it won't append the decimal 
+
+    if(x == '' || (x != '' && operand == '')) {
+        if(countX < 1) {
+            displayNum1.value += e;
+            x += e;
+        }
+    } else {
+        if(countY < 1) {
+            displayNum2.value += e;
+            y += e;
+        }
+    }
+    
+}

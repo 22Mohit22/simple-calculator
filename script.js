@@ -107,3 +107,15 @@ function handleOperatorClick(e) {
         }
     }
 }
+
+equalsEl.addEventListener('click', () => {
+    if(x != '' && operand != '' && y != '') {
+        displayNum1.value = calculate();
+        x = displayNum1.value;
+        operand = '';
+        displayOperand.value = '';
+        y = '';
+        displayNum2.value = '';
+    }
+});
+
